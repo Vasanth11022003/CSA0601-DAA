@@ -44,3 +44,19 @@ else
 }
    
 }
+
+---------------------------------------------------------------------------------------
+OUTPUT:
+
+enter m position:4
+enter nth position:3
+enter the length of the array:5
+enter the array elements1
+2
+3
+4
+5
+mth maximum number:4
+nth minimum number:3
+sum is:7
+difference is:1
