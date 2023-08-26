@@ -1,0 +1,65 @@
+#include<stdio.h>
+int binarySearch(int a[],int k,int len)
+{
+	int low=0;
+	int high=len-1;
+	int i,j,t;
+	for(i=0;i<=len-1;i++)
+	{
+		for(j=i+1;j<=len-1;j++)
+		{
+			if(a[i]>a[j])
+			{
+				t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+			}
+		}
+	}
+	printf("array elements after sorted:");
+	for(i=0;i<len;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+	while(low<=high)
+	{
+		int mid=low+high/2;
+		if(a[mid]==k)
+		{
+			return mid;
+		}
+		else if(k>a[mid])
+		{
+			low=mid+1;
+			high=high;
+		}
+		else
+		{
+			high=mid-1;
+			low=low;
+		}
+		return -1;
+	}
+}
+int main()
+{
+	int arr[10],n,key,i;
+	printf("enter the array length");
+	scanf("%d",&n);
+	printf("enter array elements:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	printf("enter a key element to search:");
+	scanf("%d",&key);
+	int res=binarySearch(arr,key,n);
+	if(res!=-1)
+	{
+		printf("\n element found at %d position:",res);
+	}
+	else
+	{
+		printf("\n element not found");
+	}
+}
