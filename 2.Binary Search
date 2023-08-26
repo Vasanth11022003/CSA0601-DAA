@@ -63,3 +63,15 @@ int main()
 		printf("\n element not found");
 	}
 }
+
+--------------------------------------------------------------------------------------
+OUTPUT:
+enter the array length5
+enter array elements:1
+2
+3
+4
+5
+enter a key element to search:3
+array elements after sorted:1   2       3       4       5
+ element found at 2 position:
